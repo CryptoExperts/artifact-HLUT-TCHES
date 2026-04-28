@@ -61,6 +61,9 @@ docker cp artifact-hlut-tches/figures/paper ./figures
 docker cp artifact-hlut-tches/figures/regenerated ./figures
 ```
 
+This reproduction can take a while depending of your hardware. On our computing server equipped with an AMD
+Ryzen Threadripper PRO 7995WX (96 cores), this takes about one hour.
+
 ## Stand-alone Tool
 
 The decomposition generation is not included in the full reproduction script, as it is computationally intensive. Instead, we provide a stand-alone tool to decompose any S-box.
