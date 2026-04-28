@@ -1,0 +1,9 @@
+[package]
+name = "tree_pbs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = "1.0.228"
+serde_json = "1.0.149"
+tfhe = { path ="../tfhe-rs-odd/tfhe/", features =["gadget", "shortint", "x86_64-unix"]}
