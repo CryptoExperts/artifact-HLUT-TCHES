@@ -1,4 +1,4 @@
-This folder contains all the code required to reproduce our experiments and regenerate the tables and figures from our paper.
+This repository contains all the code required to reproduce the experiments and regenerate the tables and figures from the paper [Decomposition of Large Look-Up Tables for Fast Homomorphic Evaluation](https://eprint.iacr.org/2026/724), published in TCHES 2026 vol. 3. Additionaly, it provides a stand-alone tool to decompose a large LUT into a circuit of smaller ones using the technique introduced in the paper. 
 
 There are two levels of reproducibility:
 
@@ -61,8 +61,7 @@ docker cp artifact-hlut-tches/figures/paper ./figures
 docker cp artifact-hlut-tches/figures/regenerated ./figures
 ```
 
-This reproduction can take a while depending of your hardware. On our computing server equipped with an AMD
-Ryzen Threadripper PRO 7995WX (96 cores), this takes about one hour.
+This reproduction can take a while depending of your hardware. On [our computing server](#hardware-requirements), this takes about one hour.
 
 ## Stand-alone Tool
 
@@ -78,6 +77,17 @@ This generates a one-bit block decomposition of the AES S-box. The output can be
 
 **S-box file format:**
 Provide output values in order, on a single line, separated by spaces. See `aes.sbox` for an example.
+
+---
+
+# Hardware Requirements
+
+Our experiments have been run on the following hardware:
+- CPU: AMD Ryzen Threadripper PRO 7995WX (96 cores),
+- RAM: 500 GB
+- OS: Debian GNU/Linux 13
+
+
 
 ---
 
@@ -178,7 +188,7 @@ The following experiments can be reproduced (and corresponding plots generated w
 * Figure 6:
 
   ```
-  make experiments-correlation-margin
+  make experiments-correlation-margin-ranks
   ```
 * Table 1:
 
@@ -188,7 +198,7 @@ The following experiments can be reproduced (and corresponding plots generated w
 * Table 2:
 
   ```
-  make experiments-counts-pbs
+  make experiments-count-pbs
   ```
 * Table 3:
 

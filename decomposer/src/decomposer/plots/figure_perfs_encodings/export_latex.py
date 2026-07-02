@@ -12,7 +12,7 @@ def print_table(input, output):
     with open(os.path.join(input, "data.pickle"), "rb") as f:
         data = pickle.load(f)
 
-    with open(os.path.join(output, "Table 3.tex"), "w") as out:
+    with open(os.path.join(output, "Table_3.tex"), "w") as out:
         out.write(
             "\\begin{table}\n"
             "    \\centering\n"
@@ -42,4 +42,4 @@ def print_table(input, output):
             out.write(f"        {n} & {row} \\\\\n")
             out.write("        \\hline\n")
 
-        out.write("    \\end{tabular}\n    \\caption{ToWRITE}\n\\end{table}\n")
+        out.write("    \\end{tabular}\n    \\end{table}\n")

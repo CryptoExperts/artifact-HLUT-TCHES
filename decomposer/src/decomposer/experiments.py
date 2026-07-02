@@ -275,7 +275,7 @@ def format_pbs_gamma_subtable(s, table_data):
     lines.extend(
         [
             r"	\end{tabular}",
-            rf"	\caption{{ToWRITE for $s={s}$}}",
+            rf"	\caption{{$s={s}$, $p={s + 1}$}}",
             r"\end{subtable}",
         ]
     )

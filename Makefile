@@ -174,15 +174,15 @@ check-decompose-vars:
 
 reproduce: $(STAMP)
 	@echo "Rerun the CJP benches"
-	@$(MAKE) bench-cjp > /dev/null 2>&1
+	@$(MAKE) bench-cjp
 	@echo "Rerun the TBM benches"
-	@$(MAKE) bench-tbm > /dev/null 2>&1
+	@$(MAKE) bench-tbm
 	@echo "Rerun the WoP-PBS benches"
-	@$(MAKE) bench-woppbs 2>&1
+	@$(MAKE) bench-woppbs
 	@echo "Rerun the benches for our work"
-	@$(MAKE) bench-hlut-full PERROR=40 MODE=paper > /dev/null 2>&1
-	@$(MAKE) bench-hlut-full PERROR=128 MODE=paper > /dev/null 2>&1
+	@$(MAKE) bench-hlut-full PERROR=40 MODE=paper
+	@$(MAKE) bench-hlut-full PERROR=128 MODE=paper
 	@echo "Rerun the other experiments"
 	@$(MAKE) experiments
 	@echo "Regenerating the Figures"
-	@$(MAKE) plots MODE=regenerated > /dev/null
+	@$(MAKE) plots MODE=regenerated
