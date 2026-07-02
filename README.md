@@ -24,7 +24,9 @@ Alternatively, you can use a Docker container:
 
 ```
 docker build -t artifact-hlut-tches .
-docker run -it artifact-hlut-tches bash
+docker run -it  \
+   -v "$PWD":/artifact \
+    artifact-hlut-tches bash
 ```
 
 ---

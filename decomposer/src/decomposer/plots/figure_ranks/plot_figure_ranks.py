@@ -19,7 +19,10 @@ plt.rcParams.update(
         "ytick.labelsize": 14,
         "legend.fontsize": 14,
         "figure.titlesize": 20,  # suptitle
-        "text.usetex": True,  # enable LaTeX rendering
+        "text.usetex": False,  # enable LaTeX rendering
+        "mathtext.fontset": "cm",
+        "font.family": "serif",
+        "font.serif": ["DejaVu Serif"],
     }
 )
 

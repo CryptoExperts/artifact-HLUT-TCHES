@@ -15,20 +15,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libssl-dev \
     make \
     pkg-config \
-    texlive-full \
     && rm -rf /var/lib/apt/lists/*
 
-RUN python -m venv .venv_artifact_tches \
-    && /opt/venv/bin/pip install --upgrade pip setuptools wheel maturin
+RUN python -m venv /opt/venv \
+    && pip install --upgrade pip setuptools wheel maturin
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain 1.84.0 \
-    && /root/.cargo/bin/rustc --version \
-    && /root/.cargo/bin/cargo --version
+    && rustc --version \
+    && cargo --version
 
 WORKDIR /artifact
 
 COPY . /artifact
-
-RUN make install
 
 CMD ["bash"]

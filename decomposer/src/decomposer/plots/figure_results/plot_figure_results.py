@@ -89,7 +89,10 @@ def plot_final_figure(timings_cjp, timings_woppbs, timings_tbm, timings_hlut, ou
             "axes.grid": True,
             "grid.alpha": 0.5,
             "grid.linestyle": "--",
-            "text.usetex": True,
+            "text.usetex": False,
+            "mathtext.fontset": "cm",
+            "font.family": "serif",
+            "font.serif": ["DejaVu Serif"],
         }
     )
     # --- plot
@@ -182,8 +185,8 @@ def plot_final_figure(timings_cjp, timings_woppbs, timings_tbm, timings_hlut, ou
 
     from matplotlib.ticker import LogLocator, ScalarFormatter
 
-    plt.xlabel("Bitwidth", fontsize=20, usetex=True)
-    plt.ylabel("Time (ms)", fontsize=20, usetex=True)
+    plt.xlabel("Bitwidth", fontsize=20, usetex=False)
+    plt.ylabel("Time (ms)", fontsize=20, usetex=False)
     plt.xlim(1, 15)
     plt.ylim(5, 10000)
     plt.yscale("log")
@@ -224,7 +227,10 @@ def plot_intro_figure(timings_cjp, timings_hlut, is_log, output):
             "axes.grid": True,
             "grid.alpha": 0.5,
             "grid.linestyle": "--",
-            "text.usetex": True,
+            "text.usetex": False,
+            "mathtext.fontset": "cm",
+            "font.family": "serif",
+            "font.serif": ["DejaVu Serif"],
         }
     )
 
@@ -267,8 +273,8 @@ def plot_intro_figure(timings_cjp, timings_hlut, is_log, output):
         )
 
     # --- labels + scales
-    ax.set_xlabel("Bitwidth", fontsize=20, usetex=True)
-    ax.set_ylabel("Time (ms)", fontsize=20, usetex=True)
+    ax.set_xlabel("Bitwidth", fontsize=20, usetex=False)
+    ax.set_ylabel("Time (ms)", fontsize=20, usetex=False)
     ax.set_xlim(1, 15)
     ax.set_ylim(5, 8100)
     if is_log:
